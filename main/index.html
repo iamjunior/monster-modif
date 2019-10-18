@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Guns管理系统">
+    <meta name="author" content="stylefeng">
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>首页 - Guns</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- toast提示框 CSS -->
+    <link href="../assets/plugins/toast-master/css/jquery.toast.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- You can change the theme colors from here -->
+    <link href="css/colors/blue.css" id="theme" rel="stylesheet">
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+
+<!-- ============================================================== -->
+<!-- Preloader加载层 - style you can find in spinners.css -->
+<!-- ============================================================== -->
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+</div>
+
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+
+    <!-- ============================================================== -->
+    <!-- 顶部导航栏 - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+
+            <!--页面左上角的logo部分-->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <b>
+                        <i class=" wi wi-solar-eclipse"></i>
+                    </b>
+                    <span>
+                        Guns管理系统
+                    </span>
+                </a>
+            </div>
+
+            <!--页面顶部的导航条-->
+            <div class="navbar-collapse">
+
+                <!--顶部导航条左侧（收缩菜单按钮和站内消息通知）-->
+                <ul class="navbar-nav mr-auto mt-md-0 ">
+                    <li class="nav-item"><a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a></li>
+                    <li class="nav-item"><a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="icon-arrow-left-circle"></i></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-email"></i>
+                            <div class="notify"><span class="heartbit"></span> <span class="point"></span></div>
+                        </a>
+                        <div class="dropdown-menu mailbox animated bounceInDown" aria-labelledby="2">
+                            <ul>
+                                <li>
+                                    <div class="drop-title">您有1条通知</div>
+                                </li>
+                                <li>
+                                    <div class="message-center">
+                                        <a href="https://gitee.com/stylefeng/guns" target="_blank">
+                                            <div class="mail-contnet">
+                                                <h5>Hi！Guns v5.2发布了！</h5>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <!--顶部导航条右侧（profile和多语言按钮） -->
+                <ul class="navbar-nav my-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic"/></a>
+                        <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                            <ul class="dropdown-user">
+                                <li>
+                                    <div class="dw-user-box">
+                                        <div class="u-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
+                                        <div class="u-text">
+                                            <h4>stylefeng</h4>
+                                            <p class="text-muted">sn93@qq.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">个人信息</a></div>
+                                    </div>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#"><i class="ti-user"></i> 编辑资料</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#"><i class="ti-settings"></i> 修改密码</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#"><i class="fa fa-power-off"></i> 退出</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="flag-icon flag-icon-us"></i></a>
+                        <div class="dropdown-menu  dropdown-menu-right animated bounceInDown">
+                            <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-cn"></i> Chinese</a>
+                            <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-us"></i> English</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ============================================================== -->
+    <!-- 结束顶部导航栏 - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- 左侧菜单列表 - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <aside class="left-sidebar">
+        <div class="scroll-sidebar">
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <li>
+                        <a href="notice.html"><i class="mdi mdi-access-point"></i>通知</a>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span class="hide-menu">系统管理</span></a>
+                        <ul aria-expanded="false" class="collapse">
+                            <li><a href="index.html">用户管理</a></li>
+                            <li><a href="index2.html">角色管理</a></li>
+                            <li><a href="index3.html">部门管理</a></li>
+                            <li><a href="index4.html">字典管理</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-apps"></i><span class="hide-menu">后台管理 </span></a>
+                        <ul aria-expanded="false" class="collapse">
+                            <li><a href="index2.html">菜单管理</a></li>
+                            <li>
+                                <a class="has-arrow" href="#" aria-expanded="false">日志管理</a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="log1.html">登录日志</a></li>
+                                    <li><a href="log2.html">业务日志</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="index3.html">监控管理</a></li>
+                            <li><a href="index5.html">通知管理</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar-footer">
+            <a href="" class="link" data-toggle="tooltip" title="编辑资料"><i class="mdi mdi-account"></i></a>
+            <a href="" class="link" data-toggle="tooltip" title="修改密码"><i class="ti-settings"></i></a>
+            <a href="" class="link" data-toggle="tooltip" title="退出登录"><i class="mdi mdi-power"></i></a>
+        </div>
+    </aside>
+    <!-- ============================================================== -->
+    <!-- 结束 左侧菜单列表 - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- 主页正式内容开始  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper">
+        <div class="container-fluid">
+
+            <!--面包屑和右侧边栏切换-->
+            <div class="row page-titles">
+                <div class="col-md-6 col-8 align-self-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">主页</a></li>
+                        <li class="breadcrumb-item active">通知公告</li>
+                    </ol>
+                </div>
+                <div class="col-md-6 col-4 align-self-center">
+                    <button class="right-side-toggle waves-effect waves-light btn-info btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
+                </div>
+            </div>
+
+            <!--开始主页的内容-->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-block">
+                            你好！欢迎使用Guns管理系统！
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-block">
+                            Hi！Guns v5.2发布了！快戳这里 <a target="_blank" href="https://gitee.com/stylefeng/guns">https://gitee.com/stylefeng/guns</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-block">
+                            Have a nice day！
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧的边栏 配置主题等等 -->
+            <div class="right-sidebar">
+                <div class="slimscrollright">
+                    <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span></div>
+                    <div class="r-panel-body">
+                        <ul id="themecolors" class="m-t-20">
+                            <li><b>With Light sidebar</b></li>
+                            <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
+                            <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+                            <li><a href="javascript:void(0)" data-theme="red" class="red-theme">3</a></li>
+                            <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme working">4</a></li>
+                            <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
+                            <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            © 2018 Guns by stylefeng （https://gitee.com/stylefeng/guns）
+        </footer>
+    </div>
+    <!-- ============================================================== -->
+    <!-- 主页正式内容结束  -->
+    <!-- ============================================================== -->
+</div>
+<!-- jquery -->
+<script src="../assets/plugins/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap tether Core JavaScript -->
+<script src="../assets/plugins/bootstrap/js/tether.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- slimscrollbar scrollbar JavaScript（滚动条插件） -->
+<script src="js/jquery.slimscroll.js"></script>
+
+<!--Wave Effects（点击按钮的波浪效果） -->
+<script src="js/waves.js"></script>
+
+<!--Menu sidebar （左侧菜单切换插件） -->
+<script src="js/sidebarmenu.js"></script>
+
+<!--stickey kit（页面头部工具栏固定） -->
+<script src="../assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+
+<!--Custom JavaScript -->
+<script src="js/custom.min.js"></script>
+
+<!-- 右侧主题设置  -->
+<script src="../assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+</body>
+
+</html>
